@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_sample_desktop/BottomPage/bottomPage.dart';
 import 'package:flutter_sample_desktop/Navbar/navbar.dart';
 
 void main() {
@@ -17,13 +18,13 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         fontFamily: "Montserrat",
       ),
-      home: const MyHomePage(),
+      home:  MyHomePage(),
     );
   }
 }
 
 class MyHomePage extends StatelessWidget {
-  const MyHomePage({Key? key}) : super(key: key);
+
 
   @override
   Widget build(BuildContext context) {
@@ -40,7 +41,7 @@ class MyHomePage extends StatelessWidget {
         )),
         child: Column(
           children: <Widget>[
-            NavBar(),
+            NavBar(),BottomPage(),
           ],
         ),
       ),
