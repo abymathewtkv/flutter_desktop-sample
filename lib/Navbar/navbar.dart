@@ -37,12 +37,12 @@ class DesktopNavBar extends StatelessWidget {
                 "Home",
                 style: TextStyle(color: Colors.white),
               ),
-                Text(
-                "Home",
+              Text(
+                "Document",
                 style: TextStyle(color: Colors.white),
               ),
-                Text(
-                "Home",
+              Text(
+                "About us",
                 style: TextStyle(color: Colors.white),
               ),
             ],
@@ -50,5 +50,12 @@ class DesktopNavBar extends StatelessWidget {
         ],
       ),
     );
+  }
+}
+
+class MobileNavBar extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container();
   }
 }
