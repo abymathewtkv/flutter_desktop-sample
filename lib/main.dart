@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_sample_desktop/Navbar/navbar.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+
 
   @override
   Widget build(BuildContext context) {
@@ -15,6 +15,7 @@ class MyApp extends StatelessWidget {
       title: 'flutter sample desktop',
       theme: ThemeData(
         primarySwatch: Colors.blue,
+        fontFamily: "Montserrat",
       ),
       home: const MyHomePage(),
     );
