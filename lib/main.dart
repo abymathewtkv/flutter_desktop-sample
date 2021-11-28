@@ -36,13 +36,18 @@ class MyHomePage extends StatelessWidget {
           end: Alignment.centerRight,
           colors: [
             Color.fromRGBO(0, 150, 150, 1.0),
-            Color.fromRGBO(0, 100, 50, 1.0)
+            Color.fromRGBO(0, 100, 150, 1.0)
           ],
         )),
-        child: Column(
-          children: <Widget>[
-            NavBar(),BottomPage(),
-          ],
+        child: SingleChildScrollView(
+          child: Column(
+            children: <Widget>[
+              NavBar(),Padding(
+                padding: const EdgeInsets.symmetric(vertical: 20.0,horizontal: 40.0),
+                child: BottomPage(),
+              ),
+            ],
+          ),
         ),
       ),
     );
