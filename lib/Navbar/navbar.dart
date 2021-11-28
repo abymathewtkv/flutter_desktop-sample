@@ -20,34 +20,64 @@ class NavBar extends StatelessWidget {
 class DesktopNavBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Row(
-        children: <Widget>[
-          Text(
-            'Sample Desktop Application',
-            style: TextStyle(
-              fontSize: 30,
-              fontWeight: FontWeight.bold,
-              color: Colors.white,
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 40),
+      child: Container(
+        constraints: BoxConstraints(maxWidth: 1200),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: <Widget>[
+            Text(
+              'Simple Desktop Application',
+              style: TextStyle(
+                fontSize: 30,
+                fontWeight: FontWeight.bold,
+                color: Colors.white,
+              ),
             ),
-          ),
-          Row(
-            children: <Widget>[
-              Text(
-                "Home",
-                style: TextStyle(color: Colors.white),
-              ),
-              Text(
-                "Document",
-                style: TextStyle(color: Colors.white),
-              ),
-              Text(
-                "About us",
-                style: TextStyle(color: Colors.white),
-              ),
-            ],
-          ),
-        ],
+            Row(
+              children: <Widget>[
+                Text(
+                  "Home",
+                  style: TextStyle(color: Colors.white),
+                ),
+                SizedBox(
+                  width: 30,
+                ),
+                Text(
+                  "Document",
+                  style: TextStyle(color: Colors.white),
+                ),
+                SizedBox(
+                  width: 30,
+                ),
+                Text(
+                  "About us",
+                  style: TextStyle(color: Colors.white),
+                ),
+                SizedBox(
+                  width: 30,
+                ),
+                MaterialButton(
+                  color: Colors.blue[300],
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(15.0),
+                    ),
+                  ),
+                  onPressed: () {},
+                  child: Text(
+                    'Log In',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontWeight: (FontWeight.bold),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ],
+        ),
       ),
     );
   }
