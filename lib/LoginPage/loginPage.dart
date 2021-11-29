@@ -6,14 +6,11 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
-
-
-final _formKey = GlobalKey<FormState>();
+  final _formKey = GlobalKey<FormState>();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-    
       appBar: AppBar(
         flexibleSpace: Container(
           decoration: BoxDecoration(
@@ -42,7 +39,7 @@ final _formKey = GlobalKey<FormState>();
         child: Center(
           child: Container(
             width: 350,
-            height: 400,
+            height: 360,
             child: Card(
               elevation: 5.0,
               child: Padding(
@@ -68,7 +65,7 @@ final _formKey = GlobalKey<FormState>();
                                 ),
                                 TextFormField(
                                   validator: (value) {
-                                    if(value!.isEmpty){
+                                    if (value!.isEmpty) {
                                       return "Enter Username";
                                     }
                                     return null;
@@ -92,10 +89,10 @@ final _formKey = GlobalKey<FormState>();
                                 ),
                                 TextFormField(
                                   validator: (value) {
-                                    if(value!.isEmpty){
+                                    if (value!.isEmpty) {
                                       return "Enter Password";
                                     }
-                                    if(value.length<6){
+                                    if (value.length < 6) {
                                       return "Minimu 6 Characters required";
                                     }
                                     return null;
@@ -121,17 +118,17 @@ final _formKey = GlobalKey<FormState>();
                         ),
                       ),
                       Align(
-                        alignment: Alignment.centerRight,
+                          alignment: Alignment.centerRight,
                           child: Text(
-                        "Forgot Password?",
-                        style: TextStyle(fontSize: 12, color: Colors.blue),
-                      )),
+                            "Forgot Password?",
+                            style: TextStyle(fontSize: 12, color: Colors.blue),
+                          )),
                       Row(
                         children: [
                           Expanded(
                             child: FlatButton(
                               onPressed: () {
-                                if(_formKey.currentState!.validate()){
+                                if (_formKey.currentState!.validate()) {
                                   print("valilated");
                                 }
                               },
