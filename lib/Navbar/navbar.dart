@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_sample_desktop/LoginPage/loginPage.dart';
 
 class NavBar extends StatelessWidget {
   @override
@@ -45,7 +46,7 @@ class DesktopNavBar extends StatelessWidget {
                   width: 30,
                 ),
                 Text(
-                  "Document",
+                  "Documents",
                   style: TextStyle(color: Colors.white),
                 ),
                 SizedBox(
@@ -65,7 +66,9 @@ class DesktopNavBar extends StatelessWidget {
                       Radius.circular(15.0),
                     ),
                   ),
-                  onPressed: () {},
+                  onPressed: () {
+                   navigateToLogin(context);
+                  },
                   child: Text(
                     'Log In',
                     style: TextStyle(
@@ -81,6 +84,12 @@ class DesktopNavBar extends StatelessWidget {
       ),
     );
   }
+
+void navigateToLogin (BuildContext context) {
+   Navigator.push(context, MaterialPageRoute(builder: (context) => LoginPage()));
+
+}
+
 }
 
 class MobileNavBar extends StatelessWidget {
