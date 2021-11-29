@@ -10,10 +10,7 @@ class _LoginPageState extends State<LoginPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(
-          'Login Page',
-          style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
-        ),
+       
         flexibleSpace: Container(
           decoration: BoxDecoration(
               gradient: LinearGradient(
@@ -55,26 +52,43 @@ class _LoginPageState extends State<LoginPage> {
                         child: Container(
                           child: Column(
                             children: <Widget>[
+                              Image.asset("assets/images/windows1.png",height: 80,width: 80,),
+                              SizedBox(
+                                height: 20,
+                              ),
                               TextFormField(
                                 decoration: InputDecoration(
+                                  prefixIcon : Icon(Icons.person),
+                                  hintText: 'Username',
                                   focusColor: Colors.blue[700],
-                                  contentPadding: EdgeInsets.zero,
-                                  border: OutlineInputBorder(
-                                     borderSide: BorderSide(
-                                      color: Colors.blue,
-                                    )
-
-                                  ),
-                                 
-
-                                  
-                                  
+                               contentPadding: EdgeInsets.only(left: 20,right: 20),
+                                  border: OutlineInputBorder(),
                                   focusedBorder: OutlineInputBorder(
-                                   
-                                  ),
+                                      borderSide: BorderSide(
+                                    color: Colors.blue,
+                                    width: 2,
+                                  )),
                                 ),
                               ),
-                              TextFormField(),
+                              SizedBox(
+                                height: 20.0,
+                              ),
+                              TextFormField(
+                                obscureText: true,
+                                decoration: InputDecoration(
+                                  prefixIcon :Icon(Icons.vpn_key_rounded),
+                                  
+                                  hintText: 'Password',
+                                  focusColor: Colors.blue[700],
+                                  contentPadding: EdgeInsets.only(left: 20,right: 20),
+                                  border: OutlineInputBorder(),
+                                  focusedBorder: OutlineInputBorder(
+                                      borderSide: BorderSide(
+                                    color: Colors.blue,
+                                    width: 2,
+                                  )),
+                                ),
+                              ),
                             ],
                           ),
                         ),
