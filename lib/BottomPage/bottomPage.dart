@@ -55,7 +55,6 @@ class BottomPage extends StatelessWidget {
         child: Image.asset(
           "assets/images/windows1.png",
           width: width,
-          
         ),
       ),
     ];
@@ -68,7 +67,7 @@ class BottomPage extends StatelessWidget {
         if (constraints.maxWidth > 800) {
           return Row(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: pageChildren(constraints.biggest.width/2),
+            children: pageChildren(constraints.biggest.width / 2),
           );
         } else {
           return Column(
