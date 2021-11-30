@@ -8,6 +8,25 @@ class LoginPage extends StatefulWidget {
 class _LoginPageState extends State<LoginPage> {
   final _formKey = GlobalKey<FormState>();
 
+
+
+ AlertDialog  showAlertDialogue () => AlertDialog(
+      title: Text("Alert Dialogue"),
+      content: Text('You have successfully logged in'),
+      actions: [
+        TextButton(
+          onPressed: () {  
+            Navigator.of(context).pop();
+          },
+          child: Text('Cancel'),
+        ),
+          TextButton(
+          onPressed: () {  },
+          child: Text('Continue'),
+        ),
+      ],
+    );
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -129,7 +148,13 @@ class _LoginPageState extends State<LoginPage> {
                             child: FlatButton(
                               onPressed: () {
                                 if (_formKey.currentState!.validate()) {
-                                  print("valilated");
+                                  showDialog(
+                                    context: context,
+                                    builder: (BuildContext context) {
+                                      return showAlertDialogue();
+                                      
+                                    }
+                                  );
                                 }
                               },
                               child: Text(
