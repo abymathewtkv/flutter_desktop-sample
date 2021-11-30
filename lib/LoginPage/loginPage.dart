@@ -1,9 +1,5 @@
-
-
 import 'package:flutter/material.dart';
 import 'package:flutter_sample_desktop/LandingPage/landingPage.dart';
-
-
 
 class LoginPage extends StatefulWidget {
   @override
@@ -25,8 +21,8 @@ class _LoginPageState extends State<LoginPage> {
           ),
           TextButton(
             onPressed: () {
-              Navigator.push(context, MaterialPageRoute(builder: (context) => LandingPage()));
-             
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => LandingPage()));
             },
             child: Text('Continue'),
           ),
@@ -39,16 +35,15 @@ class _LoginPageState extends State<LoginPage> {
       appBar: AppBar(
         flexibleSpace: Container(
           decoration: BoxDecoration(
-          gradient: LinearGradient(
-            begin: Alignment.centerLeft,
-            end: Alignment.centerRight,
-            colors: [
-              Color.fromRGBO(0, 150, 150, 1.0),
-              Color.fromRGBO(0, 100, 150, 1.0)
-            ],
+            gradient: LinearGradient(
+              begin: Alignment.centerLeft,
+              end: Alignment.centerRight,
+              colors: [
+                Color.fromRGBO(0, 150, 150, 1.0),
+                Color.fromRGBO(0, 100, 150, 1.0)
+              ],
+            ),
           ),
-        ),
-
         ),
         elevation: 0.0,
       ),
